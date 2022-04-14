@@ -19408,6 +19408,14 @@ video {
   transition-delay: 1000ms;
 }
 
+/* .card {
+  @apply bg-white rounded overflow-hidden shadow-md relative;
+}
+
+.badge {
+  @apply bg-secondary-100 text-secondary text-xs uppercase font-bold rounded-full p-1 absolute top-0 mt-2 ml-2;
+} */
+
 @media (min-width: 640px){
   .sm\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
