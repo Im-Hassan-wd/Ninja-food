@@ -12,7 +12,8 @@
 
 ```bash
 
-# git clone
-$ git clone https://github.com/Im-Hassan-wd/example.git
+# clone this repository to your local machine
+
+$ git clone https://github.com/Im-Hassan-wd/Ninja-food.git
 
 ```
