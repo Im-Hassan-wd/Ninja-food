@@ -22,11 +22,11 @@ $ git clone https://github.com/Im-Hassan-wd/Ninja-food.git
 # run the app
 
 $ npm i live-server -g
-$ live-server build
+$ live-server public
 
 # if you have live-server installed lacally
 
-right click on the build/index.html,
+right click on the public/index.html,
 then click open with live-server
 
 
