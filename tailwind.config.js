@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  content: ["./public/*/**/*.{html,js}", "./public/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -14,6 +14,5 @@ module.exports = {
       }
     },
   },
-  variants: {},
   plugins: [],
 }
