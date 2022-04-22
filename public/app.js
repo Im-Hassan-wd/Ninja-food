@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 // routes
 app.get('/', (req, res) => {
-  res.render('index', { title: 'home' });
+  res.render('index', { title: 'home', lists: []});
 });
 
 app.get('/recipes', (req, res) => {
@@ -21,7 +21,7 @@ app.get('/recipes', (req, res) => {
 });
 
 app.get('/create', (req, res) => {
-  res.render('create',  { title: 'Add new recipe' });
+  res.render('create',  { title: 'Add new recipe', lists: ['Create']});
 });
 
 // 404
