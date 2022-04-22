@@ -486,19 +486,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 1rem;
 }
 
-.my-5{
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.mx-10{
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .my-2{
@@ -562,20 +557,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.max-w-md{
-  max-width: 28rem;
-}
-
-.max-w-6xl{
-  max-width: 72rem;
-}
-
-.max-w-7xl{
-  max-width: 80rem;
-}
-
 .max-w-5xl{
   max-width: 64rem;
+}
+
+.max-w-md{
+  max-width: 28rem;
 }
 
 .transform{
@@ -710,20 +697,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-2{
   padding-bottom: 0.5rem;
 }
 
 .text-right{
   text-align: right;
-}
-
-.align-baseline{
-  vertical-align: baseline;
-}
-
-.align-top{
-  vertical-align: top;
 }
 
 .font-nunito{
@@ -748,11 +732,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-4xl{
