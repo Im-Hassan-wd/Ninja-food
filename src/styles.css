@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-1 {
+  @apply text-xs uppercase block text-gray-400;
+}
+
+.text-2 {
+  @apply text-xs uppercase block;
+}
