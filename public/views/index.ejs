@@ -20,7 +20,14 @@
       </header>
 
       <div>
-         <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
+         <h4 class="flex justify-between items-center mt-12 pb-2 border-b border-gray-200">
+            <span class="font-bold">Latest Recipes</span>
+            <a href="/create">
+               <svg class="w-5" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+               </svg>
+            </a>
+         </h4>
 
          <div class="mt-8 grid md:grid-cols-3 gap-10">
             <!-- cards go here-->
@@ -99,7 +106,7 @@
             
          </div>
 
-         <div class="flex justify-center">
+         <div class="flex justify-center mt-5">
             <button class="bg-secondary-100 text-secondary-200 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load more</button>
          </div>
       </div>
