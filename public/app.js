@@ -13,11 +13,11 @@ app.set('view engine', 'ejs');
 
 // routes
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { title: 'home' });
 });
 
 app.get('/recipes', (req, res) => {
-  res.render('recipe');
+  res.render('recipe',  { title: 'recipe' });
 });
 
 // 404
