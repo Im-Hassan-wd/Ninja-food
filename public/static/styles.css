@@ -768,6 +768,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: right;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
 .font-nunito{
   font-family: Nunito;
 }

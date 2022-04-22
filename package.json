@@ -2,7 +2,7 @@
   "name": "tailwind-tutorial",
   "version": "1.0.0",
   "description": "All the course files for the Tailwind CSS tutorial on the Net Ninja YouTube channel.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build-css": "tailwindcss build src/styles.css -o public/styles.css"
   },
