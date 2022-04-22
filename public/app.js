@@ -20,6 +20,10 @@ app.get('/recipes', (req, res) => {
   res.render('recipe',  { title: 'recipe' });
 });
 
+app.get('/create', (req, res) => {
+  res.render('create',  { title: 'Add new recipe' });
+});
+
 // 404
 app.use((req, res) => {
   res.status(404).render('404', { title: '404'});
