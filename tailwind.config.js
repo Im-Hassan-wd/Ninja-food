@@ -1,5 +1,9 @@
 module.exports = {
-  content: ["./public/*/**/*.{html,js}", "./public/*.{html,js}"],
+  content: [
+    "./public/**/*.{html,js,ejs}", 
+    './client/**/*.{html,js,ejs}',
+    './views/**/*.{html,js,ejs}'
+  ],
   theme: {
     extend: {
       colors: {
