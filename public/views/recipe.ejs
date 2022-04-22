@@ -198,9 +198,10 @@
     const ingrdientDiv = document.querySelectorAll('#list');
     ingrdientDiv.forEach(ingrdient => {
       ingrdient.children[0].addEventListener('click', () => {
-        ingrdient.children[1].classList.toggle('line-through')
-      })
-    })
+        ingrdient.children[1].classList.toggle('line-through');
+        ingrdient.classList.toggle('opacity-80');
+      });
+    });
   </script>
 </body>
 </html>
