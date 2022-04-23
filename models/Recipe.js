@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
 const recipeSchema = new mongoose.Schema({
-  name: {
+  recipeName: {
     type: String
   },
-  snippet: {
+  recipeSnippet: {
     type: String
   },
-  ingredients: {
+  recipeIngredients: {
     type: Array
   },
-  instructions: {
+  recipeInstructions: {
     type: Array
   }
 });

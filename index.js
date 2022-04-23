@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const PORT = process.env.PORT || 4000
 
 const app = express();
@@ -32,6 +33,11 @@ app.get('/recipes', (req, res) => {
 app.get('/create', (req, res) => {
   res.render('create',  { title: 'Add new recipe', lists: ['Create']});
 });
+
+app.post('/create', (req, res) => {
+  console.log(req.body);
+
+})
 
 // 404
 // app.use((req, res) => {
