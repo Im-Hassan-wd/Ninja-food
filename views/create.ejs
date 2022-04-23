@@ -61,19 +61,21 @@
       const ingredient = form.ingredient;
       const instruction = form.instruction;
 
-      let ingrdients = [];
-      let instuctions = []
+      let ingredients = [];
+      let instructions = []
 
       form.addEventListener('submit', (e) => {
          e.preventDefault();
       }); 
 
       ingrdientBtn.addEventListener('click', () => {
-         console.log(ingredient.value);
+         ingredients.push[ingredient.value];
+         console.log(ingredients)
       })
 
       instructionBtn.addEventListener('click', () => {
-         console.log(instruction.value);
+         instructions.push[instruction.value];
+         console.log(instructions)
       })
    </script>
 </body>
