@@ -3,7 +3,6 @@ const PORT = process.env.PORT || 4000
 
 const app = express();
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 // middleware and static files
 app.use(express.static('static'));
@@ -26,6 +25,8 @@ app.get('/create', (req, res) => {
 });
 
 // 404
-app.use((req, res) => {
-  res.status(404).render('404', { title: '404'});
-});
+// app.use((req, res) => {
+//   res.status(404).render('404', { title: '404'});
+// });
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));

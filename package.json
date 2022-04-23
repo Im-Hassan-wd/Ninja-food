@@ -2,7 +2,7 @@
   "name": "Ninja-food",
   "version": "1.0.0",
   "description": "<h1 align='center'>Wick food</h1>",
-  "main": "tailwind.config.js",
+  "main": "index.js",
   "scripts": {
     "start": "node public/index.js",
     "build": "npx tailwindcss -i src/styles.css -o public/static/styles.css"
