@@ -15,3 +15,7 @@
 .list {
   @apply flex my-2 mb-7;
 }
+
+.btn {
+  @apply  rounded-full text-white p-2 mt-4;
+}

@@ -4,7 +4,7 @@
   "description": "<h1 align='center'>Wick food</h1>",
   "main": "index.js",
   "scripts": {
-    "start": "node public/index.js",
+    "start": "node index.js",
     "build": "npx tailwindcss -i src/styles.css -o public/static/styles.css"
   },
   "repository": {
