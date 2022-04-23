@@ -3,13 +3,15 @@ const PORT = process.env.PORT || 4000
 
 const app = express();
 
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+// register view engine
+app.set('view engine', 'ejs');
 
 // middleware and static files
 app.use(express.static('static'));
 app.use(express.urlencoded({ extended: true}));
 
-// register view engine
-app.set('view engine', 'ejs');
 
 // routes
 app.get('/', (req, res) => {
@@ -28,5 +30,3 @@ app.get('/create', (req, res) => {
 // app.use((req, res) => {
 //   res.status(404).render('404', { title: '404'});
 // });
-
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
