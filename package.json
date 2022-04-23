@@ -1,29 +1,25 @@
 {
-  "name": "tailwind-tutorial",
+  "name": "Ninja-food",
   "version": "1.0.0",
-  "description": "All the course files for the Tailwind CSS tutorial on the Net Ninja YouTube channel.",
-  "main": "index.js",
-  "engines": {
-    "node": "14.x"
-  },
+  "description": "<h1 align='center'>Wick food</h1>",
+  "main": "tailwind.config.js",
   "scripts": {
-    "start": "node public/index.js",
-    "test": "node test.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/tailwind-tutorial.git"
+    "url": "git+https://github.com/Im-Hassan-wd/Ninja-food.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamshaunjp/tailwind-tutorial/issues"
+    "url": "https://github.com/Im-Hassan-wd/Ninja-food/issues"
   },
-  "homepage": "https://github.com/iamshaunjp/tailwind-tutorial#readme",
+  "homepage": "https://github.com/Im-Hassan-wd/Ninja-food#readme",
   "dependencies": {
-    "tailwindcss": "^1.4.6",
-    "ejs": "^3.1.6",
-    "express": "^4.17.3"
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "tailwindcss": "^3.0.24"
   }
 }
