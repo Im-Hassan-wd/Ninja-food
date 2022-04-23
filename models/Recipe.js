@@ -7,6 +7,9 @@ const recipeSchema = new mongoose.Schema({
   recipeSnippet: {
     type: String
   },
+  recipeBy: {
+    type: String  
+  },
   recipeIngredients: {
     type: Array
   },
