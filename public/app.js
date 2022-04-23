@@ -12,9 +12,10 @@
 
   // form 
   const form = document.querySelector('form');
-  const ingrdientBtn = document.querySelector('.ingredientBtn');
+  const ingredientBtn = document.querySelector('.ingredientBtn');
+  const instructionBtn = document.querySelector('.instructionBtn');
   const ingredientDiv = document.querySelector('.ingredient');
-  const instructionDiv = document.querySelector('.insruction');
+  const instructionDiv = document.querySelector('.instruction');
 
   const ingredient = form.ingredient;
   const instruction = form.instruction;
@@ -26,14 +27,12 @@
      e.preventDefault();
   }); 
 
-  ingrdientBtn.addEventListener('click', () => {
+  ingredientBtn.addEventListener('click', () => {
      ingredients.push(ingredient.value);
-     ingredients.forEach(ingredient => {
-      ingredientDiv.innerText = ingredient;
-     })
+     ingredientDiv.innerHTML += '<li>'+ingredient.value+'</li>'
   })
 
   instructionBtn.addEventListener('click', () => {
      instructions.push(instruction.value);
-     console.log(instructions)
+     instructionDiv.innerHTML += '<li>'+instruction.value+'</li>'
   })
