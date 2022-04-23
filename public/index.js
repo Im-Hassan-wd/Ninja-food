@@ -1,8 +1,9 @@
 const express = require('express');
+const PORT = process.env.PORT || 5000
 
 const app = express();
 
-app.listen(4000);
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 // middleware and static files
 app.use(express.static('static'));
