@@ -21,7 +21,7 @@
               <div class="col-span-4 ingredient text-sm max-w-xs italic"></div>
               <input class="col-span-3 p py-2 px-3 w-full border border-gray-400 rounded" type="text" name="ingrdients" required />
               <div class="mt-auto">
-                <button class="btn bg-secondary-200 text-secondary-100">Add</button>
+                <button class="ingredientBtn btn bg-secondary-200 text-secondary-100">Add</button>
              </div>
             </div>
 
@@ -30,7 +30,7 @@
               <div class="col-span-4 instuction text-sm max-w-xs italic"></div>
               <textarea class="col-span-3 py-2 px-3 w-full h-50 border border-gray-400 rounded resize-none" name="instuctions" id="" cols="" rows="5"></textarea>
               <div class="mt-auto">
-                <button class="btn bg-secondary-200 text-secondary-100">Add</button>
+                <button class="instructionBtn btn bg-secondary-200 text-secondary-100">Add</button>
              </div>
             </div>
 
@@ -41,6 +41,7 @@
      <%- include('./partials/footer.ejs') %>
 
      <script>
+        // menu bar
       const burger = document.querySelector('#burger');
       const menu = document.querySelector('#menu');
 
@@ -51,6 +52,23 @@
             menu.classList.add('hidden');
          }
       });
+
+      // form 
+      const form = document.querySelector('form');
+      const ingrdientBtn = document.querySelector('.ingredientBtn');
+      const instructionBtn = document.querySelector('.instructionBtn');
+
+      form.addEventListener('submit', (e) => {
+         e.preventDefault();
+      }); 
+
+      ingrdientBtn.addEventListener('click', () => {
+         console.log(ingrdientBtn);
+      })
+
+      instructionBtn.addEventListener('click', () => {
+         console.log(instructionBtn);
+      })
    </script>
 </body>
 </html>
