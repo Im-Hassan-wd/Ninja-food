@@ -3,14 +3,21 @@ const PORT = process.env.PORT || 4000
 
 const app = express();
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 // register view engine
 app.set('view engine', 'ejs');
 
 // middleware and static files
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+
+// database connection
+const dbURI = "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/node-auth" 
+mongoose.connect(dbURI)
+  .then((result) => {
+    app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  })
+  .catch((err) => console.log(err));
 
 
 // routes
