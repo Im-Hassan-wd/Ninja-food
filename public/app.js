@@ -27,12 +27,14 @@ ingredientBtn.addEventListener('click', (e) => {
    e.preventDefault();
    ingredients.push(ingredient.value);
    ingredientDiv.innerHTML += '<li>'+ingredient.value+'</li>'
+   ingredient.value = '';
 })
 
 instructionBtn.addEventListener('click', (e) => {
    e.preventDefault();
    instructions.push(instruction.value);
    instructionDiv.innerHTML += '<li>'+instruction.value+'</li>'
+   instruction.value = '';
 })
 
 form.addEventListener('submit', async (e) => {

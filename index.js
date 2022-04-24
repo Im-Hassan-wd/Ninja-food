@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
   Recipe.find().sort({ createdAt: -1})
    .then((result) => {
      console.log(result)
-     res.render('index', { title: 'Home', lists: [], recipes: result});
+     res.render('index', { title: 'Home', recipes: result, lists: [], }) ;
    })
    .catch((err) => {
      console.log(err);
