@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Recipe = require('./models/Recipe');
+const { home_get } = require('./controllers/controller')
 const PORT = process.env.PORT || 4000
 
 const app = express();
@@ -13,28 +14,18 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.json());
 
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 // database connection
 const dbURI = "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/node-auth" 
 mongoose.connect(dbURI)
   .then((result) => {
-    app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+    console.log('connected')
   })
   .catch((err) => console.log(err));
 
 
 // routes
-app.get('/', (req, res) => {
-  Recipe.find().sort({ createdAt: -1})
-   .then((result) => {
-     console.log(result)
-     res.render('index', { title: 'Home', recipes: result, lists: [], }) ;
-   })
-   .catch((err) => {
-     console.log(err);
-   })
-
-  res.render('index', { title: 'home', lists: []});
-});
+app.get('/', home_get);
 
 app.get('/recipes', (req, res) => {
   res.render('recipe',  { title: 'recipe' });
