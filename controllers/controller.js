@@ -17,10 +17,10 @@ module.exports.create_get = (req, res) => {
 }
 
 module.exports.create_post = async (req, res) => {
-  const { recipeName, recipeSnippet, recipeBy, recipeIngredients, recipeInstructions } = req.body;
+  const { recipeName, recipeSnippet, recipeBy, cookTime, prepTime, recipeIngredients, recipeInstructions } = req.body;
   
   try {
-    const recipe = await new Recipe({ recipeName, recipeSnippet, recipeBy, recipeIngredients, recipeInstructions });
+    const recipe = await new Recipe({ recipeName, recipeSnippet, recipeBy, cookTime, prepTime, recipeIngredients, recipeInstructions });
     const savedRecipe = await recipe.save();
     if(savedRecipe) {
       res.status(200).json({ recipe: recipe._id });

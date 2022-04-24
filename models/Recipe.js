@@ -15,6 +15,12 @@ const recipeSchema = new mongoose.Schema({
   },
   recipeInstructions: {
     type: Array
+  },
+  cookTime: {
+    type: Number
+  },
+  prepTime: {
+    type: Number
   }
 });
 
