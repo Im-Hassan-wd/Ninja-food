@@ -1,7 +1,7 @@
 const Recipe = require('../models/Recipe');
 
 module.exports.home_get = async (req, res ) => {
-  const recipes = await Recipe.find();
+  const recipes = await Recipe.find().sort({ createdAt: -1});
   if(recipes) {
     res.render('index', { title: 'Home', recipes, lists: [], })
   }
@@ -14,6 +14,20 @@ module.exports.recipe_get = (req, res) => {
 
 module.exports.create_get = (req, res) => {
   res.render('create',  { title: 'Add new recipe', lists: ['Create']});
+}
+
+module.exports.recipe_details_get = async (req, res) => {
+  const id = req.params.id;
+  
+  try {
+    const recipe = Recipe.findById(id);
+    if(recipe){
+      res.render('details', { title: 'Recipe details', recipe})
+    }
+  }
+  catch(err){
+    console.log(err);
+  }
 }
 
 module.exports.create_post = async (req, res) => {

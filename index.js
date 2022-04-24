@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Recipe = require('./models/Recipe');
-const { home_get, recipe_get, create_get, create_post } = require('./controllers/controller')
+const { home_get, recipe_get, create_get, create_post, recipe_details_get } = require('./controllers/controller')
 const PORT = process.env.PORT || 4000
 
 const app = express();
@@ -26,6 +26,7 @@ mongoose.connect(dbURI)
 // routes
 app.get('/', home_get);
 app.get('/recipes', recipe_get);
+app.get('/recipes/:id', recipe_details_get);
 app.get('/create', create_get);
 app.post('/create', create_post)
 
