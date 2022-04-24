@@ -14,12 +14,11 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.json());
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 // database connection
 const dbURI = "mongodb+srv://weird:test123@cluster0.ud8op.mongodb.net/node-auth" 
 mongoose.connect(dbURI)
   .then((result) => {
-    console.log('connected')
+    app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
   })
   .catch((err) => console.log(err));
 
