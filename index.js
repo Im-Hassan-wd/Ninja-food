@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const Recipe = require('./models/Recipe');
 const PORT = process.env.PORT || 4000
 
 const app = express();
@@ -23,6 +24,15 @@ mongoose.connect(dbURI)
 
 // routes
 app.get('/', (req, res) => {
+  Recipe.find().sort({ createdAt: -1})
+   .then((result) => {
+     console.log(result)
+     res.render('index', { title: 'Home', lists: [], recipes: result});
+   })
+   .catch((err) => {
+     console.log(err);
+   })
+
   res.render('index', { title: 'home', lists: []});
 });
 
@@ -35,8 +45,11 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-  console.log(req.body);
+  const recipe = new Recipe(req.body)
 
+  recipe.save()
+   .then(result => res.status(200).json({ recipe: recipe._id }))
+   .catch(err => console.log(err))
 })
 
 // 404

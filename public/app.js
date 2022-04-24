@@ -41,16 +41,21 @@ form.addEventListener('submit', async (e) => {
    // get the values
    const recipeName = form['recipe-name'].value;
    const recipeSnippet = form['recipe-snippet'].value;
+   const recipeBy= form['recipe-by'].value;
    const recipeIngredients = ingredients;
    const recipeInstructions = instructions;
-   console.log(recipeName, recipeSnippet, recipeIngredients, recipeInstructions)
 
    try{
       const res = await fetch('/create', {
       method: 'POST',
-      body: JSON.stringify({ recipeName, recipeSnippet, recipeIngredients, recipeInstructions }),
+      body: JSON.stringify({ recipeName, recipeSnippet, recipeBy, recipeIngredients, recipeInstructions }),
       headers: { 'Content-Type': 'application/json'}
       });
+      const data = await res.json();
+      console.log(data);
+      if(data.recipe){
+         location.assign('/');
+      }
    }
    catch(err){
       console.log(err);
