@@ -19,7 +19,7 @@ module.exports.recipe_details_get = (req, res) => {
   const id = req.params.id;
     const recipe = Recipe.findById(id)
       .then(result => {
-        res.render('details', { title: 'Recipe details', recipe}); 
+        res.render('details', { title: 'Recipe details', recipe: result}); 
       })
       .catch(err => console.log(err))
     // if(recipe){
