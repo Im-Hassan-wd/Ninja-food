@@ -5,29 +5,26 @@ module.exports.home_get = async (req, res ) => {
   if(recipes) {
     res.render('index', { title: 'Home', recipes, lists: [], })
   }
-
 }
 
 module.exports.recipe_get = (req, res) => {
-  res.render('recipe',  { title: 'recipe' });
+  res.redirect('/');
 }
 
 module.exports.create_get = (req, res) => {
   res.render('create',  { title: 'Add new recipe', lists: ['Create']});
 }
 
-module.exports.recipe_details_get = async (req, res) => {
+module.exports.recipe_details_get = (req, res) => {
   const id = req.params.id;
-  
-  try {
-    const recipe = Recipe.findById(id);
-    if(recipe){
-      res.render('details', { title: 'Recipe details', recipe})
-    }
-  }
-  catch(err){
-    console.log(err);
-  }
+    const recipe = Recipe.findById(id)
+      .then(result => {
+        res.render('details', { title: 'Recipe details', recipe}); 
+      })
+      .catch(err => console.log(err))
+    // if(recipe){
+    //   console.log(recipe, recipe.paths)
+    // }
 }
 
 module.exports.create_post = async (req, res) => {
